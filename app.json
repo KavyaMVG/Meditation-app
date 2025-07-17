@@ -4,7 +4,7 @@
     "slug": "meditation-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/lotus-unsplash.jpg",
     "scheme": "meditationapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
