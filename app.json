@@ -1,13 +1,19 @@
 {
   "expo": {
-    "name": "meditation-app",
-    "slug": "meditation-app",
+    "name": "Calm Bloom",
+    "slug": "calm-bloom",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/lotus-unsplash.jpg",
+    "icon": "./assets/images/splash-lotus.png",
     "scheme": "meditationapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/splash-lotus.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+
     "ios": {
       "supportsTablet": true
     },
@@ -25,17 +31,9 @@
     },
     "plugins": [
       "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
-        }
-      ],
       "expo-audio",
-      "expo-video"
+      "expo-video",
+      "expo-splash-screen"
     ],
     "experiments": {
       "typedRoutes": true

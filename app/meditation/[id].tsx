@@ -127,7 +127,7 @@ const Meditation = () => {
               onPress={handleMeditationDuration}
             />
             <CustomButton
-              title="Start Meditation"
+              title={isMeditating ? "Stop" : "Start Meditation"}
               onPress={toggleMeditationStatus}
               containerStyles="mt-4"
             />

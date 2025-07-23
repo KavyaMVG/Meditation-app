@@ -13,7 +13,7 @@ const NatureMediation = () => {
       <AppGradient colors={["#161b2e", "#0a4d4a", "#766e67"]}>
         <View className="m-4">
           <Text className="text-4xl text-gray-200 font-bold mb-3 text-left">
-            Welcome K
+            Welcome
           </Text>
           <Text className="font-medium text-xl text-indigo-100">
             Start your mediatation today

@@ -1,12 +1,35 @@
 import AppGradient from "@/components/AppGradient";
 import CustomButton from "@/components/CustomButton";
+import ScheduleDailyRemainder from "@/components/ScheduleDailyRemainder";
+import * as Notifications from "expo-notifications";
 import { useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+import { useEffect } from "react";
 import { ImageBackground, SafeAreaView, Text, View } from "react-native";
 import beachImg from "../assets/images/beach.webp";
 
 const Index = () => {
   const router = useRouter();
+
+  Notifications.setNotificationHandler({
+    handleNotification: async () => ({
+      shouldPlaySound: true,
+      shouldSetBadge: false,
+      shouldShowBanner: true,
+      shouldShowList: true,
+    }),
+  });
+
+  useEffect(() => {
+    const setupNotifications = async () => {
+      const { status } = await Notifications.requestPermissionsAsync();
+      if (status !== "granted") {
+        alert("Please enable notifications to get meditation reminders.");
+      }
+    };
+    setupNotifications();
+  }, []);
+
   return (
     <View className="flex-1">
       <ImageBackground source={beachImg} className="flex-1" resizeMode="cover">
@@ -17,7 +40,7 @@ const Index = () => {
                 Meditation
               </Text>
               <Text className="text-3xl font-semibold text-center color-[#fff] mt-3">
-                Lorem Epsum yehjrkehjkdhfhf fhrhgjddjhf jhfedfheuif
+                Moment of calm
               </Text>
             </View>
             <View>
@@ -25,8 +48,8 @@ const Index = () => {
                 onPress={() => router.push("/nature-meditation")}
                 title="Get Started"
               ></CustomButton>
+              <ScheduleDailyRemainder />
             </View>
-
             <StatusBar style="light" />
           </SafeAreaView>
         </AppGradient>
