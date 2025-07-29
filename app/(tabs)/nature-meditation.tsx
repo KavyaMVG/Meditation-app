@@ -16,7 +16,7 @@ const NatureMediation = () => {
             Welcome
           </Text>
           <Text className="font-medium text-xl text-indigo-100">
-            Start your mediatation today
+            Start your meditation today
           </Text>
         </View>
         <View>

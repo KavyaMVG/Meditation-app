@@ -37,7 +37,7 @@ const Meditation = () => {
         audioSound.unloadAsync();
       }
     };
-  }, []);
+  }, [audioSound]);
 
   useEffect(() => {
     let timerId: ReturnType<typeof setTimeout>;
@@ -54,7 +54,7 @@ const Meditation = () => {
     return () => {
       clearTimeout(timerId);
     };
-  }, [setDuration, isMeditating]);
+  }, [duration, isMeditating, setDuration]);
 
   const formattedTimeMinutes = String(Math.floor(duration / 60)).padStart(
     2,
