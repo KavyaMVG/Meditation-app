@@ -38,7 +38,7 @@ npm install
 ### Start the development server
 
 ```
-npm expo start
+npx expo start
 ```
 
 ![App Screenshot](./assets/images/getstarted_screen.jpg)

@@ -5,6 +5,7 @@ node_modules/
 
 # Expo
 .expo/
+.expo-shared/
 dist/
 web-build/
 expo-env.d.ts
@@ -37,3 +38,13 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+
+# Build artifacts
+android/.gradle
+android/.idea
+android/app/build
+ios/Pods
+ios/build
+
+# Xcode workspace
+ios/*.xcworkspace
